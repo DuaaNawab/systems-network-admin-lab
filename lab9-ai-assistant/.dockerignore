@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+app.log
+list_models.py
+test_models.py

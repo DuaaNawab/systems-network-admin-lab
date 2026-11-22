@@ -1,0 +1,28 @@
+=== Sun Nov 22 21:11:35 UTC 2026 ===
+--- container health ---
+NAME                        STATUS
+lab10-it-helpdesk-api-1     Up 15 minutes (healthy)
+lab10-it-helpdesk-db-1      Up 18 minutes (healthy)
+lab10-it-helpdesk-nginx-1   Up 14 minutes
+--- CPU and memory ---
+NAME                        CPU %     MEM USAGE / LIMIT
+lab10-it-helpdesk-api-1     0.14%     62.05MiB / 7.756GiB
+lab10-it-helpdesk-nginx-1   0.00%     3.363MiB / 7.756GiB
+lab10-it-helpdesk-db-1      0.00%     44.15MiB / 7.756GiB
+--- API availability and response time ---
+GET /health: HTTP 200, 0.015484s
+--- database connectivity (through API health) ---
+{"status":"ok","database":"ok"}
+--- requests by status code (Nginx access log) ---
+     10 " 200 
+      1 " 401 
+      1 " 422 
+--- failed model calls / fallbacks (API log) ---
+0
+--- tickets by status ---
+  status   | count 
+-----------+-------
+ escalated |     2
+ open      |     6
+(2 rows)
+
